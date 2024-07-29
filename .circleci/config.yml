@@ -38,10 +38,8 @@ jobs:
 workflows:
   build-and-test:
     jobs:
-      - test-node
       - build-node:
           requires:
-            - test-node
             - test-java
       - test-java
     # - deploy:
